@@ -13,6 +13,11 @@
 <% end %>	
 
 
-
-
-<li><%= link_to "Home", root_path %></li>
+<h2><%= link_to "Home", root_path %></h2>
+<% if @photostream %>
+    <%= link_to 'Photostream', FlickRaw.url_photostream(@photostream[0]) =%>
+    <% @photostream.each do |image| %>
+    <div class = "image">
+      <%= image_tag FlickRaw.url_n(image) =%>
+<% end %>
+<h2><%= link_to "Home", root_path %></h2>
