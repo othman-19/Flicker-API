@@ -1,1 +1,0 @@
-Figaro.require_keys("pusher_key", "pusher_secret")
